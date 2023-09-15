@@ -16,5 +16,4 @@ Teniendo en cuenta el problema y conociendo que los factores que mas influyen en
 Voy a utilizar el lenguaje de programación Python ya que la mayoría de las APIs para el mapa, para el tiempo y otras variables a tener en cuenta funcionan en Python, por lo que es más sencillo integrarlo todo dentro de el sistema.
 
 
-***Configuración Objetivo 0***
 [Configuración Objetivo 0](objetivo0.md)
