@@ -15,5 +15,17 @@ Teniendo en cuenta el problema y conociendo que los factores que mas influyen en
 ***Tecnología***
 Voy a utilizar el lenguaje de programación Python ya que la mayoría de las APIs para el mapa, para el tiempo y otras variables a tener en cuenta funcionan en Python, por lo que es más sencillo integrarlo todo dentro de el sistema.
 
+### Información Adicional
 
+#### OBJETIVO 0
 [Configuración Objetivo 0](objetivo0.md)
+
+#### OBJETIVO 1
+Se ha creado un User Journey especificando el usuario que usará la aplicación.
+[User Journey](docs/user_journey.md)
+
+En las historias de usuario hemos desgranado los deseos que espera el usuario del sistema.
+[Historias de Usuario](docs/historias_de_usuario.md)
+
+En los milestones hemos declarado los hitos que debemos cumplir para presentar cada MVP exitosamente teniendo en cuenta las historias de usuario.
+[Milestones](docs/milestones.md)
