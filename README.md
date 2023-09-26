@@ -10,7 +10,7 @@
 Por ley los camioneros tienen que hacer una serie de paradas para descansar durante el trayecto que recorren y muchas de las veces por culpa de no organizar y planificar bien la ruta, por no tener en cuenta varias variables que se deben tener en cuenta, quedan mal estacionados y otras muchas veces no les da tiempo a llegar a su destino a tiempo, con lo que el conductor tiene que quedar esperando hasta el día siguiente para entregar la mercancia con la perdida económica y de tiempo que conlleva.
 
 ***Resolución***
-Teniendo en cuenta el problema, podemos crear un sistema informático que indicandole el numero de ruta podemos optimizar que las paradas obligatorias, que son cada 4 horas y media una parada de 45 min y cada 9 horas, 11 horas de descanso ininterrumpidas, sean los idóneos para que les de tiempo a llegar antes del descanso y consigan llegar a tiempo al destino.
+Teniendo en cuenta el problema, podemos crear un sistema informático que indicandole el número de ruta podemos optimizar que las paradas obligatorias, que son cada 4 horas y media una parada de 45 min y cada 9 horas, 11 horas de descanso ininterrumpidas, sean los idóneos para que les de tiempo a llegar antes del descanso y consigan llegar a tiempo al destino.
 
 
 ### Información Adicional
