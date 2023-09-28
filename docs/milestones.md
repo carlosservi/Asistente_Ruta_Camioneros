@@ -2,7 +2,8 @@
 
 ## Milestone 0
 ### Objetivos:
-    - Realizar un análisis detallado de las HUs de Usuario, enfocándose en la entrada de la ruta, cálculo de paradas teniendo en cuenta los posibles retrasos que pueden suceder según se paré en una estación de servicio u otra.
+    - Realizar un análisis detallado de las HUs de Usuario, enfocándose en la entrada de la ruta, cálculo de paradas y hora de llegada teniendo en cuenta los posibles retrasos que pueden suceder según se paré en una estación de servicio u otra.
+    Con todo ello el sistema debe ser capaz de establecer una hora de salida óptima y las paradas idóneas para llegar al destino a tiempo.
 
 ### Entregables:
     - Documento detallado del modelo del problema.
@@ -13,7 +14,7 @@
 ## Milestone 1
 ### Objetivos:
 
-    - Codificar el algoritmo de optimización de rutas que tenga en cuenta los tiempos de descanso obligatorios, las posibles estaciones de servicio dónde parar, calculando los posibles retrasos producidos y minimizandolos.
+    - Codificar el algoritmo de optimización de rutas que tenga en cuenta los tiempos de descanso obligatorios, las posibles estaciones de servicio dónde parar, calculando los posibles retrasos producidos y minimizandolos, además de la hora de salida requerida.
     - Implementar la lógica para verificar la disponibilidad de las áreas de descanso en los momentos programados.
     - Integrar el sistema con la base de datos para obtener y almacenar información sobre rutas y áreas de descanso.
     - Establecer un sistema de notificaciones que informe al conductor sobre las paradas programadas y cualquier cambio en la ruta.

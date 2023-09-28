@@ -10,7 +10,7 @@
 - ¿Qué pasos tiene que dar para obtener la solución a su problema?
 
 ***Administrador de la aplicación***
-Carlos Servillera, se encarga de introducir rutas nuevas, introduce origen, destino y también un listado de áreas de descanso que hay en la ruta que no se desvíen mas de 1 kilometro de la ruta, con sus respectivos horarios y distancias entre sí para que el sistema pueda calcular las áreas de descanso idóneas para hacer las paradas.
+Carlos Servillera, se encarga de introducir rutas nuevas, introduce origen, destino y también un listado de áreas de descanso que hay en la ruta que no se desvíen mas de 2 kilometro de la ruta, con sus respectivos horarios y distancias entre sí, además del tiempo de retraso en la ruta que se introduce la parada en cada estación, para que el sistema pueda calcular las áreas de descanso idóneas para hacer las paradas, y la hora de salida requerida para llegar a tiempo.
 
 ***Usuario útil de la aplicación***
 Antonio Fernández, camionero de profesión, Conocimientos muy extensos en mecánica y conducción, pocos conocimientos de tecnología.
@@ -25,4 +25,4 @@ Antonio usa la aplicación mientras trabaja para saber los paradas que tiene que
 Antonio necesita usar una tablet o en su defecto un smartphone que le indica las paradas que debe realizar y el retraso que provocaría cambiar de parada.
 
 ***¿Qué pasos tiene que dar para obtener la solución a su problema?***
-Antonio ejecuta la aplicación y simplemente inserta el número de ruta y el sistema automáticamente le presenta las paradas.
+Antonio ejecuta la aplicación y simplemente inserta el número de ruta y la hora de llegada y el sistema automáticamente le presenta las paradas y la hora de salida requerida para llegar a tiempo.
