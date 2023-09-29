@@ -1,6 +1,6 @@
 # Milestones
 
-## Milestone 0
+## Milestone 0 : Modelo del problema
 ### Objetivos:
     - Realizar un análisis detallado de las HUs para conseguir los elementos del dominio del problema y poder crear estructuras de datos inmutables para posteriormente codificarlas. Crear el modelo del problema.
 
@@ -10,7 +10,7 @@
 ### Viabilidad:
     - Será viable si lo aprueba el product manager
 
-## Milestone 1
+## Milestone 1: Algoritmo optimización de rutas
 ### Objetivos:
     - Codificar el algoritmo de optimización de rutas que tenga en cuenta los tiempos de descanso obligatorios, las posibles estaciones de servicio dónde parar, calculando los posibles retrasos producidos y minimizandolos, además de la hora de salida requerida.
 
