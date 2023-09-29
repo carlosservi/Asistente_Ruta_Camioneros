@@ -14,6 +14,8 @@ Las áreas de descanso deben estar abiertas cuando Antonio necesite parar.
 ## HU2
 Carlos y Marta son conductores de un camión que realiza rutas nacionales en equipo. 
 
+Carlos y Marta tienen que cambiar de conductor cada 4 horas y media que corresponderá con una parada en un área de servicio que producirá un retraso en la ruta de 15 minutos.
+
 Por ley, deben tomar un descanso obligatorio de 9 horas por cada 30 horas de recorrido.
 
 El sistema debe permitir a Carlos y Marta ingresar el número de ruta y la hora de llegada requerida. 

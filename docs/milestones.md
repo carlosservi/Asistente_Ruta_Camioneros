@@ -2,28 +2,20 @@
 
 ## Milestone 0
 ### Objetivos:
-    - Realizar un análisis detallado de las HUs de Usuario, enfocándose en la entrada de la ruta, cálculo de paradas y hora de llegada teniendo en cuenta los posibles retrasos que pueden suceder según se paré en una estación de servicio u otra.
-    Con todo ello el sistema debe ser capaz de establecer una hora de salida óptima y las paradas idóneas para llegar al destino a tiempo.
+    - Realizar un análisis detallado de las HUs para conseguir los elementos del dominio del problema y poder crear estructuras de datos inmutables para posteriormente codificarlas.
 
 ### Entregables:
-    - Documento detallado del modelo del problema.
+    - Código relacionado con el modelo del problema.
 
 ### Viabilidad:
-    - Será viable si se entrega un documento apropiado del modelo del problema y lo aprueba el product manager
+    - Será viable si lo aprueba el product manager
 
 ## Milestone 1
 ### Objetivos:
-
     - Codificar el algoritmo de optimización de rutas que tenga en cuenta los tiempos de descanso obligatorios, las posibles estaciones de servicio dónde parar, calculando los posibles retrasos producidos y minimizandolos, además de la hora de salida requerida.
-    - Implementar la lógica para verificar la disponibilidad de las áreas de descanso en los momentos programados.
-    - Integrar el sistema con la base de datos para obtener y almacenar información sobre rutas y áreas de descanso.
-    - Establecer un sistema de notificaciones que informe al conductor sobre las paradas programadas y cualquier cambio en la ruta.
 
 ### Entregables:
-
     - Motor de optimización de rutas implementado.
-    - Integración completa con la base de datos.
-    - Sistema de notificaciones y alertas operativo.
 
 ### Viabilidad:
-    - Será viable si es un MVP.
+    - Será viable si se comprueba que funciona correctamente.
