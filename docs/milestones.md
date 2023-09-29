@@ -2,7 +2,7 @@
 
 ## Milestone 0
 ### Objetivos:
-    - Realizar un análisis detallado de las HUs para conseguir los elementos del dominio del problema y poder crear estructuras de datos inmutables para posteriormente codificarlas.
+    - Realizar un análisis detallado de las HUs para conseguir los elementos del dominio del problema y poder crear estructuras de datos inmutables para posteriormente codificarlas. Crear el modelo del problema.
 
 ### Entregables:
     - Código relacionado con el modelo del problema.
