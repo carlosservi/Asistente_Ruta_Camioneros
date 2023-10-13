@@ -14,6 +14,7 @@ func NewOpeningHours(day string, startTime string, endTime string) *OpeningHours
 	}
 }
 
+// Definicion de la entidad Area de descanso
 type RestArea struct {
 	openingHours []OpeningHours
 	latitude     float64
@@ -37,5 +38,26 @@ func NewRestArea(openingHours []OpeningHours, latitude float64, longitude float6
 		openingHours: openingHours,
 		latitude:     latitude,
 		longitude:    longitude,
+	}
+}
+
+// Definición de la entidad Ruta
+type Route struct {
+	id        string
+	restAreas []RestArea
+}
+
+func (r Route) Id() string {
+	return r.id
+}
+
+func (r Route) RestAreas() []RestArea {
+	return r.restAreas
+}
+
+func NewRoute(id string, restAreas []RestArea) *Route {
+	return &Route{
+		id:        id,
+		restAreas: restAreas,
 	}
 }
