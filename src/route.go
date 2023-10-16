@@ -1,4 +1,5 @@
-package main
+package route
+
 import (
 	"time"
 )
