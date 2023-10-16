@@ -1,4 +1,7 @@
 package main
+import (
+	"time"
+)
 
 type OpeningHours struct {
 	Day       string
@@ -17,6 +20,7 @@ func NewOpeningHours(day string, startTime string, endTime string) *OpeningHours
 // Definicion de la entidad Area de descanso
 type RestArea struct {
 	openingHours []OpeningHours
+	timeToArrive time.Duration
 	distance     uint16
 }
 
@@ -28,12 +32,15 @@ func (r RestArea) Distance() uint16 {
 	return r.distance
 }
 
+func (r RestArea) TimeToArrive() time.Duration {
+	return r.timeToArrive
 }
 
-func NewRestArea(openingHours []OpeningHours, latitude float64, longitude float64) *RestArea {
+func NewRestArea(openingHours []OpeningHours, distance uint16, timeToArrive time.Duration) *RestArea {
 	return &RestArea{
 		openingHours: openingHours,
 		distance:     distance,
+		timeToArrive: timeToArrive,
 	}
 }
 
