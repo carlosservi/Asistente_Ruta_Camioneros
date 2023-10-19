@@ -33,6 +33,21 @@ func NewRestArea(openingHours []OpeningHours) *RestArea {
 	}
 }
 
+// Definicion de las Distancias entre areas de descanso
+type RestAreaDistances struct {
+	distances [][]uint16
+}
+
+func (r RestAreaDistances) Distance(origin uint8, destination uint8) uint16 {
+	return r.distances[origin][destination]
+}
+
+func NewRestAreaDistances(distances [][]uint16) *RestAreaDistances {
+	return &RestAreaDistances{
+		distances: distances,
+	}
+}
+
 // Definición de la entidad Ruta
 type Route struct {
 	id               string
