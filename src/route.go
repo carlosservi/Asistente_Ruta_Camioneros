@@ -21,15 +21,21 @@ func NewOpeningHours(day string, startTime string, endTime string) *OpeningHours
 // Definicion de la entidad Area de descanso
 type RestArea struct {
 	openingHours []OpeningHours
+	id           uint8
 }
 
 func (r RestArea) OpeningHours() []OpeningHours {
 	return r.openingHours
 }
 
-func NewRestArea(openingHours []OpeningHours) *RestArea {
+func (r RestArea) Id() uint8 {
+	return r.id
+}
+
+func NewRestArea(openingHours []OpeningHours, id uint8) *RestArea {
 	return &RestArea{
 		openingHours: openingHours,
+		id:           id,
 	}
 }
 
