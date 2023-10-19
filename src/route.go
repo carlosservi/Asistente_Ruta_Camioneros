@@ -21,7 +21,6 @@ func NewOpeningHours(day string, startTime string, endTime string) *OpeningHours
 // Definicion de la entidad Area de descanso
 type RestArea struct {
 	openingHours []OpeningHours
-	timeToArrive time.Duration
 	distance     uint16
 }
 
@@ -33,22 +32,18 @@ func (r RestArea) Distance() uint16 {
 	return r.distance
 }
 
-func (r RestArea) TimeToArrive() time.Duration {
-	return r.timeToArrive
-}
-
-func NewRestArea(openingHours []OpeningHours, distance uint16, timeToArrive time.Duration) *RestArea {
+func NewRestArea(openingHours []OpeningHours, distance uint16) *RestArea {
 	return &RestArea{
 		openingHours: openingHours,
 		distance:     distance,
-		timeToArrive: timeToArrive,
 	}
 }
 
 // Definición de la entidad Ruta
 type Route struct {
-	id        string
-	restAreas []RestArea
+	id               string
+	restAreas        []RestArea
+	timesToRestAreas []time.Duration
 }
 
 func (r Route) Id() string {
@@ -59,9 +54,14 @@ func (r Route) RestAreas() []RestArea {
 	return r.restAreas
 }
 
-func NewRoute(id string, restAreas []RestArea) *Route {
+func (r Route) TimesToRestAreas() []time.Duration {
+	return r.timesToRestAreas
+}
+
+func NewRoute(id string, restAreas []RestArea, timesToRestAreas []time.Duration) *Route {
 	return &Route{
-		id:        id,
-		restAreas: restAreas,
+		id:               id,
+		restAreas:        restAreas,
+		timesToRestAreas: timesToRestAreas,
 	}
 }
