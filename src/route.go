@@ -45,6 +45,7 @@ type Route struct {
 	arrivalTime      time.Time
 	restAreas        []RestArea
 	timesToRestAreas []time.Duration
+	routeDistances   [][]int16
 }
 
 func (r Route) Id() string {
@@ -63,11 +64,12 @@ func (r Route) TimesToRestAreas() []time.Duration {
 	return r.timesToRestAreas
 }
 
-func NewRoute(id string, arrivalTime time.Time, restAreas []RestArea, timesToRestAreas []time.Duration) *Route {
+func NewRoute(id string, arrivalTime time.Time, restAreas []RestArea, timesToRestAreas []time.Duration, routeDistances [][]int16) *Route {
 	return &Route{
 		id:               id,
 		arrivalTime:      arrivalTime,
 		restAreas:        restAreas,
 		timesToRestAreas: timesToRestAreas,
+		routeDistances:   routeDistances,
 	}
 }
