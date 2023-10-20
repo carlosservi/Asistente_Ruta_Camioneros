@@ -4,10 +4,18 @@ import (
 	"time"
 )
 
-type OpeningHours struct{}
+type OpeningHours struct {
+	StartTime time.Time
+	CloseTime time.Time
+	Weekday   time.Weekday
+}
 
-func NewOpeningHours() *OpeningHours {
-	return &OpeningHours{}
+func NewOpeningHours(startTime time.Time, closeTime time.Time, weekday time.Weekday) *OpeningHours {
+	return &OpeningHours{
+		StartTime: startTime,
+		CloseTime: closeTime,
+		Weekday:   weekday,
+	}
 }
 
 // Definicion de la entidad Area de descanso
