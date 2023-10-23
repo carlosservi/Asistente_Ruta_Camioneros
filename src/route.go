@@ -41,11 +41,10 @@ func NewRestArea(openingHours []OpeningHours, id uint8) *RestArea {
 
 // Definición de la entidad Ruta
 type Route struct {
-	id               string
-	arrivalTime      time.Time
-	restAreas        []RestArea
-	timesToRestAreas []time.Duration
-	routeDistances   [][]int16
+	id             string
+	arrivalTime    time.Time
+	restAreas      []RestArea
+	routeDistances [][]int16
 }
 
 func (r Route) Id() string {
@@ -60,16 +59,11 @@ func (r Route) RestAreas() []RestArea {
 	return r.restAreas
 }
 
-func (r Route) TimesToRestAreas() []time.Duration {
-	return r.timesToRestAreas
-}
-
-func NewRoute(id string, arrivalTime time.Time, restAreas []RestArea, timesToRestAreas []time.Duration, routeDistances [][]int16) *Route {
+func NewRoute(id string, arrivalTime time.Time, restAreas []RestArea, routeDistances [][]int16) *Route {
 	return &Route{
-		id:               id,
-		arrivalTime:      arrivalTime,
-		restAreas:        restAreas,
-		timesToRestAreas: timesToRestAreas,
-		routeDistances:   routeDistances,
+		id:             id,
+		arrivalTime:    arrivalTime,
+		restAreas:      restAreas,
+		routeDistances: routeDistances,
 	}
 }
