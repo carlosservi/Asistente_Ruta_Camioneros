@@ -24,14 +24,6 @@ type RestArea struct {
 	id           uint8
 }
 
-func (r RestArea) OpeningHours() []OpeningHours {
-	return r.openingHours
-}
-
-func (r RestArea) Id() uint8 {
-	return r.id
-}
-
 func NewRestArea(openingHours []OpeningHours, id uint8) *RestArea {
 	return &RestArea{
 		openingHours: openingHours,
@@ -46,18 +38,6 @@ type Route struct {
 	restAreas      []RestArea
 	routeDistances [][]int16
 	routeTimes     [][]time.Duration
-}
-
-func (r Route) Id() string {
-	return r.id
-}
-
-func (r Route) ArrivalTime() time.Time {
-	return r.arrivalTime
-}
-
-func (r Route) RestAreas() []RestArea {
-	return r.restAreas
 }
 
 func NewRoute(id string, arrivalTime time.Time, restAreas []RestArea, routeDistances [][]int16, routeTimes [][]time.Duration) *Route {
