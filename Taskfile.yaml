@@ -1,0 +1,26 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - echo "Compilando el proyecto..."
+      - go build -o ./bin/Asistente_Ruta_Camioneros ./src/*.go
+      - echo "Listo."
+
+  clean:
+    cmds:
+      - echo "Limpiando archivos binarios..."
+      - rm -rf ./bin/*
+      - echo "Listo."
+
+  run: 
+    cmds:
+      - task build
+      - echo "Ejecutando el proyecto..."
+      - ./bin/Asistente_Ruta_Camioneros
+
+  test:
+    cmds:
+      - echo "Ejecutando tests..."
+      - go test ./tests/...
+      - echo "Listo."
