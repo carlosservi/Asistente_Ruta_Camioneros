@@ -24,3 +24,17 @@ tasks:
       - echo "Ejecutando tests..."
       - go test ./tests/...
       - echo "Listo."
+
+  check:
+    cmds:
+      - echo "Comprobando sintaxis..."
+      - task build
+      - echo "Listo."
+
+  help:
+    cmds:
+      - echo "Task check: Comprueba la sintaxis de la entidad o entidades programadas."
+      - echo "Task build: Compila el proyecto."
+      - echo "Task clean: Limpia los archivos binarios."
+      - echo "Task run: Ejecuta el proyecto."
+      - echo "Task test: Ejecuta los tests."
