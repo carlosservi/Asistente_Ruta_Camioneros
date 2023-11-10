@@ -1,7 +1,3 @@
-module carlosservi/asistente-ruta-camioneros
+module Asistente_Ruta_Camioneros
 
-go 1.21.2
-
-require (
-
-)
+go 1.18
