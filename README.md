@@ -44,4 +44,4 @@ Introduciendo make help o task help te muestra los comandos necesarios muy senci
 
 Además ese archivo bin lo he incluido en gitignore para que no lo introduzca en el repositorio ya que es muy fácil generarlo.
 
-Para realizar la comprobación de que funciona podemos usar task check
+Para realizar la comprobación de que funciona podemos usar task check check
