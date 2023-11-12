@@ -32,7 +32,7 @@ Herramientas para la gestión de tareas en proyectos de Go:
         Desventajas:
         Aunque es una opción sólida, puede no ser tan conocido como make en la comunidad en general.
 
-El más ampliamente usado es makefile, pero puede ser interesante probar otro que use un archivo YAML ya que es muy fácil de realizar.
+El más ampliamente usado es makefile, por lo que merece la pena hacer la comprobación con él y por otro lado puede ser interesante probar otro que use un archivo YAML ya que es muy fácil de utilizar, he decidido que voy a usar Task porque ofrece una sintaxis muy simple en un archivo YAML, está creado concretamente para ser un gestor de tareas como lo que necesito, además no usa ningún lenguaje de programación especifico y puedes usarlo con todos ya que simplemente pones la sentencia a ejecutar en un YAML y la ejecuta sin tener que preconfigurar nada. A diferencia de Mage por ejemplo que hace uso de la sinstaxis de Go y necesitas conocer más específicamente para utilizarlo. Just es muy similar a Task por lo que con probar Task es suficiente.
 
 Tras estos datos voy a hacerlo con makefile y con Task y me quedaré con el que más me convenza.
 
@@ -47,4 +47,3 @@ Algunas de sus características son:
     Versionado Semántico (SemVer)
     Comandos de gestión simplificados ('go get', 'go mod tidy')
     Descarga automática y almacenamiento en caché de las dependencias necesarias.
-
