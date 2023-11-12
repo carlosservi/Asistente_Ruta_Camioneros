@@ -28,7 +28,7 @@ tasks:
   check:
     cmds:
       - echo "Comprobando sintaxis..."
-      - task build
+      - task vet ./...
       - echo "Listo."
 
   help:
