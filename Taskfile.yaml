@@ -14,8 +14,9 @@ tasks:
       - echo "Listo."
 
   run: 
+    depends:
+      - build
     cmds:
-      - task build
       - echo "Ejecutando el proyecto..."
       - ./bin/Asistente_Ruta_Camioneros
 
