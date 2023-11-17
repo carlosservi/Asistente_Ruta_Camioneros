@@ -2,6 +2,12 @@
 
 Necesito un gestor de tareas que sea versátil y de fácil manejo. Además necesito que funcione en varios lenguajes de programación entre ellos y fundamentalmente para éste proyecto con Golang, por lo que voy a realizar una comparación de ventajas e inconvenientes y probaré dos para ver cuál me convence más.
 
+## Criterios
+- Adopción.- Es buen indicador que un gestor de tareas sea ampliamente usado ya que puede indicar que es un gestor fiable.
+- Facilidad.- Es buena elección elegir un gestor de tareas que sea fácil de usar e intuitivo.
+- Fácil de configurar
+- Lenguaje de uso: Es interesante que el lenguaje de uso sea lo más fácil posible y cuanto más parecido sea al lenguaje humano más fácil será, por ejemplo, Make tiene su sintaxis especial que necesitas conocer y por ejemplo Task se acerca mucho al lenguaje humano y simplemente necesitas poner la sentencias de Go para que funcione.
+
 ## Herramientas para la gestión de tareas en proyectos de Go:
 
 - Makefile: El Makefile es el gestor de tareas más comúnmente utilizado en proyectos de Go. Es una herramienta muy potente y versátil que te permite definir reglas y dependencias de construcción para tu proyecto.
@@ -33,12 +39,6 @@ Necesito un gestor de tareas que sea versátil y de fácil manejo. Además neces
         Es fácil de configurar y usar.
         Desventajas:
         Aunque es una opción sólida, puede no ser tan conocido como make en la comunidad en general.
-
-## Criterios
-- Adopción.- Es buen indicador que un gestor de tareas sea ampliamente usado ya que puede indicar que es un gestor fiable.
-- Facilidad.- Es buena elección elegir un gestor de tareas que sea fácil de usar e intuitivo.
-- Fácil de configurar
-- Lenguaje de uso: Es interesante que el lenguaje de uso sea lo más fácil posible y cuanto más parecido sea al lenguaje humano más fácil será, por ejemplo, Make tiene su sintaxis especial que necesitas conocer y por ejemplo Task se acerca mucho al lenguaje humano y simplemente necesitas poner la sentencias de Go para que funcione.
 
 El más ampliamente usado es makefile, por lo que merece la pena hacer la comprobación con él y por otro lado puede ser interesante probar otro que use un archivo YAML ya que es muy fácil de utilizar, he decidido que voy a usar Task porque ofrece una sintaxis muy simple en un archivo YAML, está creado concretamente para ser un gestor de tareas como lo que necesito, además no usa ningún lenguaje de programación especifico y puedes usarlo con todos ya que simplemente pones la sentencia a ejecutar en un YAML y la ejecuta sin tener que preconfigurar nada. A diferencia de Mage por ejemplo que hace uso de la sinstaxis de Go y necesitas conocer más específicamente para utilizarlo. Just es muy similar a Task por lo que con probar Task es suficiente.
 
