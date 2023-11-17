@@ -1,2 +1,5 @@
 lenguaje: Go
 entidad: src/route.go
+automatizar:
+  fichero: "Taskfile.yaml"
+  orden: task check

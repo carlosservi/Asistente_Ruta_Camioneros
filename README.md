@@ -16,7 +16,7 @@ Teniendo en cuenta el problema, podemos crear un sistema informático que indica
 ### Información Adicional
 
 #### OBJETIVO 0
-[Configuración Objetivo 0](objetivo0.md)
+[Configuración Objetivo 0](docs/objetivo0.md)
 
 #### OBJETIVO 1
 Se ha creado un User Journey especificando el usuario que usará la aplicación.
@@ -27,3 +27,28 @@ En las historias de usuario hemos desgranado los deseos que espera el usuario de
 
 En los milestones hemos declarado los hitos que debemos cumplir para presentar cada MVP exitosamente teniendo en cuenta las historias de usuario.
 [Milestones](docs/milestones.md)
+
+#### OBJETIVO 3
+En el fichero [Eleccion Gestores](docs/eleccion_gestor_tareas_y_dependencias.txt) está incluido lo que he tenido en cuenta para tomar la decisión de elegir un gestor de dependencias y un gestor de tareas.
+
+He elegido el gestor de dependencias estándar de Golang que es Go Modules ya que funciona automáticamente y es su estándar.
+Para el gestor de tareas he indagado sobre varios gestores y he decidido probar dos, Task y Mafefile y después de realizar las pruebas pertinentes, los dos funcionan muy bien y a pesar de que makefile esta muy extendido, la facilidad del archivo .yaml de Task y lo bien que funciona me hace decantarme por TASK.
+En la tarea de realizar las pruebas he usado el fichero route.go que incluye algunos struct y algunas funciones para comprobar su funcionamiento y van genial los dos.
+
+Comando para instalar Task en Ubuntu
+
+```bash
+snap install task --classic
+```
+
+Introduciendo make help o task help te muestra los comandos necesarios muy sencillos.
+
+Por ejemplo ```make build o task build`` compila el proyecto e ingresa el bin en la carpeta ./bin
+
+Además ese archivo bin lo he incluido en gitignore para que no lo introduzca en el repositorio ya que es muy fácil generarlo.
+
+Para realizar la comprobación **check** 
+
+```bash
+task check
+```

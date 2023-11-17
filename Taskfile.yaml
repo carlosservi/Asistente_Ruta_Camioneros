@@ -1,0 +1,41 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - echo "Compilando el proyecto..."
+      - go build -o ./bin/Asistente_Ruta_Camioneros ./src/*.go
+      - echo "Listo."
+
+  clean:
+    cmds:
+      - echo "Limpiando archivos binarios..."
+      - rm -rf ./bin/*
+      - echo "Listo."
+
+  run: 
+    depends:
+      - build
+    cmds:
+      - echo "Ejecutando el proyecto..."
+      - ./bin/Asistente_Ruta_Camioneros
+
+  test:
+    cmds:
+      - echo "Ejecutando tests..."
+      - go test ./tests/...
+      - echo "Listo."
+
+  check:
+    cmds:
+      - echo "Comprobando sintaxis..."
+      - task vet ./...
+      - echo "Listo."
+
+  help:
+    cmds:
+      - echo "Task check: Comprueba la sintaxis de la entidad o entidades programadas."
+      - echo "Task build: Compila el proyecto."
+      - echo "Task clean: Limpia los archivos binarios."
+      - echo "Task run: Ejecuta el proyecto."
+      - echo "Task test: Ejecuta los tests."
