@@ -3,27 +3,3 @@ entidad: src/route.go
 automatizar:
   fichero: "Taskfile.yaml"
   orden: task check
-  tareas:
-    - nombre: install
-      descripcion: "Instala las dependencias del proyecto"
-      orden: "go mod tidy"
-
-    - nombre: build
-      descripcion: "Compila todos los ficheros .go del proyecto"
-      orden: "task build"
-
-    - nombre: test
-      descripcion: "Ejecuta las pruebas del proyecto"
-      orden: "task test"
-    
-    - nombre: clean
-      descripcion: "Elimina todos los bin del proyecto"
-      orden: "task clean"
-
-    - nombre: run
-      descripcion: "Ejecuta los bin del proyecto"
-      orden: "task run"  
-
-    - nombre: check
-      descripcion: "Comprueba la sintaxis de la entidad o entidades programadas"
-      orden: "make check"
