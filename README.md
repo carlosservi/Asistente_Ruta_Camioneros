@@ -38,16 +38,17 @@ En la tarea de realizar las pruebas he usado el fichero route.go que incluye alg
 Comando para instalar Task en Ubuntu
 
 ```bash
-sudo snap install task --classic
+snap install task --classic
 ```
 
-Makefile no necesita instalación.
+Introduciendo make help o task help te muestra los comandos necesarios muy sencillos.
 
-Introduciendo make help o task help te muestra los comandos necesarios muy sencillos. Por ejemplo make build o task build compila el proyecto e ingresa el bin en la carpeta ./bin
+Por ejemplo ```make build o task build`` compila el proyecto e ingresa el bin en la carpeta ./bin
 
 Además ese archivo bin lo he incluido en gitignore para que no lo introduzca en el repositorio ya que es muy fácil generarlo.
 
 Para realizar la comprobación **check** 
+
 ```bash
 task check
 ```
