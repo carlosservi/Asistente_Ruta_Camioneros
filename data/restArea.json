@@ -1,0 +1,204 @@
+[{
+    "id": 1,
+    "OpeningHours": [
+    {
+        "weekday": "time.Monday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Tuesday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Wednesday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Thursday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Friday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('23:00', horaStr)"
+    },
+    {
+        "weekday": "time.Saturday",
+        "startTime": "time.Parse('10:00', horaStr)",
+        "endTime": "time.Parse('23:00', horaStr)"
+    },
+    {
+        "weekday": "time.Sunday",
+        "startTime": "time.Parse('10:00', horaStr)",
+        "endTime": "time.Parse('17:00', horaStr)"
+    }]
+},
+{
+    "id": 2,
+    "OpeningHours": [
+    {
+        "weekday": "time.Monday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Wednesday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Thursday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Friday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    }]
+},
+{
+    "id": 3,
+    "OpeningHours": [
+    {
+        "weekday": "time.Monday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Tuesday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Wednesday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Thursday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Friday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Saturday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Sunday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    }]
+},
+{
+    "id": 4,
+    "OpeningHours": [
+    {
+        "weekday": "time.Monday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Tuesday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Wednesday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Thursday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Friday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Saturday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Sunday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    }]
+},
+{
+    "id": 5,
+    "OpeningHours": [
+    {
+        "weekday": "time.Monday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Tuesday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Wednesday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Thursday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Friday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('23:00', horaStr)"
+    },
+    {
+        "weekday": "time.Saturday",
+        "startTime": "time.Parse('10:00', horaStr)",
+        "endTime": "time.Parse('23:00', horaStr)"
+    },
+    {
+        "weekday": "time.Sunday",
+        "startTime": "time.Parse('10:00', horaStr)",
+        "endTime": "time.Parse('17:00', horaStr)"
+    }]
+},
+{
+    "id": 6,
+    "OpeningHours": [
+    {
+        "weekday": "time.Monday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Wednesday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Thursday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    },
+    {
+        "weekday": "time.Friday",
+        "startTime": "time.Parse('08:00', horaStr)",
+        "endTime": "time.Parse('22:00', horaStr)"
+    }]
+}]
