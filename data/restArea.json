@@ -1,5 +1,5 @@
 [{
-    "id": 1,
+    "id": "Granada",
     "OpeningHours": [
     {
         "weekday": "time.Monday",
@@ -35,10 +35,11 @@
         "weekday": "time.Sunday",
         "startTime": "time.Parse('10:00', horaStr)",
         "endTime": "time.Parse('17:00', horaStr)"
-    }]
+    }],
+    "retraso": 30
 },
 {
-    "id": 2,
+    "id": "Jaen",
     "OpeningHours": [
     {
         "weekday": "time.Monday",
@@ -59,49 +60,11 @@
         "weekday": "time.Friday",
         "startTime": "time.Parse('08:00', horaStr)",
         "endTime": "time.Parse('22:00', horaStr)"
-    }]
+    }],
+    "retraso": 25
 },
 {
-    "id": 3,
-    "OpeningHours": [
-    {
-        "weekday": "time.Monday",
-        "startTime": "time.Parse('00:00', horaStr)",
-        "endTime": "time.Parse('00:00', horaStr)"
-    },
-    {
-        "weekday": "time.Tuesday",
-        "startTime": "time.Parse('00:00', horaStr)",
-        "endTime": "time.Parse('00:00', horaStr)"
-    },
-    {
-        "weekday": "time.Wednesday",
-        "startTime": "time.Parse('00:00', horaStr)",
-        "endTime": "time.Parse('00:00', horaStr)"
-    },
-    {
-        "weekday": "time.Thursday",
-        "startTime": "time.Parse('00:00', horaStr)",
-        "endTime": "time.Parse('00:00', horaStr)"
-    },
-    {
-        "weekday": "time.Friday",
-        "startTime": "time.Parse('00:00', horaStr)",
-        "endTime": "time.Parse('00:00', horaStr)"
-    },
-    {
-        "weekday": "time.Saturday",
-        "startTime": "time.Parse('00:00', horaStr)",
-        "endTime": "time.Parse('00:00', horaStr)"
-    },
-    {
-        "weekday": "time.Sunday",
-        "startTime": "time.Parse('00:00', horaStr)",
-        "endTime": "time.Parse('00:00', horaStr)"
-    }]
-},
-{
-    "id": 4,
+    "id": "Ciudad Real",
     "OpeningHours": [
     {
         "weekday": "time.Monday",
@@ -137,10 +100,51 @@
         "weekday": "time.Sunday",
         "startTime": "time.Parse('00:00', horaStr)",
         "endTime": "time.Parse('00:00', horaStr)"
-    }]
+    }],
+    "retraso": 45
 },
 {
-    "id": 5,
+    "id": "Toledo",
+    "OpeningHours": [
+    {
+        "weekday": "time.Monday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Tuesday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Wednesday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Thursday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Friday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Saturday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    },
+    {
+        "weekday": "time.Sunday",
+        "startTime": "time.Parse('00:00', horaStr)",
+        "endTime": "time.Parse('00:00', horaStr)"
+    }],
+    "retraso": 30
+},
+{
+    "id": "Madrid",
     "OpeningHours": [
     {
         "weekday": "time.Monday",
@@ -176,10 +180,11 @@
         "weekday": "time.Sunday",
         "startTime": "time.Parse('10:00', horaStr)",
         "endTime": "time.Parse('17:00', horaStr)"
-    }]
+    }],
+    "retraso": 60
 },
 {
-    "id": 6,
+    "id": "Zaragoza",
     "OpeningHours": [
     {
         "weekday": "time.Monday",
@@ -200,5 +205,6 @@
         "weekday": "time.Friday",
         "startTime": "time.Parse('08:00', horaStr)",
         "endTime": "time.Parse('22:00', horaStr)"
-    }]
+    }],
+    "retraso": 25
 }]
