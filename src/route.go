@@ -38,6 +38,7 @@ type Route struct {
 	restAreas      []RestArea
 	routeDistances [][]int16
 	routeTimes     [][]time.Duration
+	totalDistance  int16
 }
 
 func NewRoute(id string, arrivalTime time.Time, restAreas []RestArea, routeDistances [][]int16, routeTimes [][]time.Duration) *Route {
