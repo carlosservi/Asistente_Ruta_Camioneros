@@ -22,12 +22,14 @@ func NewOpeningHours(startTime time.Time, closeTime time.Time, weekday time.Week
 type RestArea struct {
 	openingHours []OpeningHours
 	id           uint8
+	retraso      time.Duration
 }
 
-func NewRestArea(openingHours []OpeningHours, id uint8) *RestArea {
+func NewRestArea(openingHours []OpeningHours, id uint8, retraso time.Duration) *RestArea {
 	return &RestArea{
 		openingHours: openingHours,
 		id:           id,
+		retraso:      retraso,
 	}
 }
 
@@ -41,12 +43,13 @@ type Route struct {
 	totalDistance  int16
 }
 
-func NewRoute(id string, arrivalTime time.Time, restAreas []RestArea, routeDistances [][]int16, routeTimes [][]time.Duration) *Route {
+func NewRoute(id string, arrivalTime time.Time, restAreas []RestArea, routeDistances [][]int16, routeTimes [][]time.Duration, totalDistance int16) *Route {
 	return &Route{
 		id:             id,
 		arrivalTime:    arrivalTime,
 		restAreas:      restAreas,
 		routeDistances: routeDistances,
 		routeTimes:     routeTimes,
+		totalDistance:  totalDistance,
 	}
 }
