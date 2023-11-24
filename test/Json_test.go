@@ -67,6 +67,30 @@ func TestParseRouteJSON(t *testing.T) {
 	})
 }
 
+func TestParseDescansosJSON(t *testing.T) {
+	t.Run("Parsing a valid Descansos JSON", func(t *testing.T) {
+		// Given a Descanso JSON with Nombre "Descanso 1" and Tiempo 270 and Descanso 45
+		filePath := "../data/descansos.json"
+
+		// When I parse the Descansos JSON
+		parsedDescanso, err := route.ReadJsonDescansos(filePath)
+		if err != nil {
+			t.Fatalf("Error parsing Descansos JSON: %v", err)
+		}
+
+		// Then the parsed Descansos should have Nombre "Descanso 1" and Tiempo 270 and Descanso 45
+		expectedDescanso := route.Descansos{
+			Nombre:   "Descanso 1",
+			Tiempo:   270,
+			Descanso: 45,
+		}
+
+		if !descansoEqual(parsedDescanso[0], expectedDescanso) {
+			t.Errorf("Parsed Route does not match the expected values")
+		}
+	})
+}
+
 func restAreaEqual(ra1, ra2 route.RestArea) bool {
 	// Compara los campos uno por uno
 	if ra1.Id != ra2.Id {
@@ -149,6 +173,23 @@ func routeEqual(r1, r2 route.Route) bool {
 		if r1.RouteTimes[i] != r2.RouteTimes[i] {
 			return false
 		}
+	}
+
+	return true
+}
+
+func descansoEqual(d1, d2 route.Descansos) bool {
+	// Compara los campos uno por uno
+	if d1.Nombre != d2.Nombre {
+		return false
+	}
+
+	if d1.Tiempo != d2.Tiempo {
+		return false
+	}
+
+	if d1.Descanso != d2.Descanso {
+		return false
 	}
 
 	return true
