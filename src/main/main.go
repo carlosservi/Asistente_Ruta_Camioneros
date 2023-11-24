@@ -37,4 +37,17 @@ func main() {
 			log.Printf("Area: %s", areas)
 		}
 	}
+
+	// Crear los objetos descansos
+	filePath = "data/descansos.json"
+	descansos, err := route.ReadJsonDescansos(filePath)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Mostrar por la terminal el objeto descansos
+	for _, descanso := range descansos {
+		log.Printf("Nombre: %s, Tiempo: %d, Descanso: %d", descanso.Nombre, descanso.Tiempo, descanso.Descanso)
+	}
+
 }

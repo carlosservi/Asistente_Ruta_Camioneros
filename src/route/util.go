@@ -32,3 +32,17 @@ func ReadJsonRoutes(filePath string) ([]Route, error) {
 	}
 	return routes, nil
 }
+
+func ReadJsonDescansos(filePath string) ([]Descansos, error) {
+	data, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		return nil, err
+	}
+
+	var descansos []Descansos
+	err = json.Unmarshal(data, &descansos)
+	if err != nil {
+		return nil, err
+	}
+	return descansos, nil
+}

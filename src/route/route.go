@@ -53,3 +53,19 @@ func NewRoute(id uint16, arrivalTime time.Time, restAreas []string, routeDistanc
 		TotalDistance:  totalDistance,
 	}
 }
+
+type Descansos struct {
+	Nombre   string `json:"nombre"`
+	Tiempo   int16  `json:"tiempo"`
+	Descanso int16  `json:"descanso"`
+}
+
+func NewDescansos(nombre string, tiempo int16, descanso int16) *Descansos {
+	return &Descansos{
+		Nombre:   nombre,
+		Tiempo:   tiempo,
+		Descanso: descanso,
+	}
+}
+
+//Necesito un algoritmo que pasandole una ruta, una lista de areas de descanso y , me devuelva las areas de descanso que se pueden visitar, teniendo en cuenta sus horarios de apertura y cierre
