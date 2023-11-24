@@ -18,7 +18,8 @@ tasks:
       - build
     cmds:
       - echo "Ejecutando el proyecto..."
-      - ./bin/Asistente_Ruta_Camioneros
+      - go run ./src/main/main.go
+      #- ./bin/Asistente_Ruta_Camioneros
 
   test:
     cmds:
@@ -29,13 +30,13 @@ tasks:
   check:
     cmds:
       - echo "Comprobando sintaxis..."
-      - task vet ./...
+      - go vet ./...
       - echo "Listo."
 
-  help:
-    cmds:
-      - echo "Task check: Comprueba la sintaxis de la entidad o entidades programadas."
-      - echo "Task build: Compila el proyecto."
-      - echo "Task clean: Limpia los archivos binarios."
-      - echo "Task run: Ejecuta el proyecto."
-      - echo "Task test: Ejecuta los tests."
+  # help:
+  #   cmds:
+  #     - echo "task check: Comprueba la sintaxis de la entidad o entidades programadas."
+  #     - echo "task build: Compila el proyecto."
+  #     - echo "task clean: Limpia los archivos binarios."
+  #     - echo "task run: Ejecuta el proyecto."
+  #     - echo "task test: Ejecuta los tests."
