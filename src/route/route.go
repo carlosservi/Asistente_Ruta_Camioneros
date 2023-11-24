@@ -11,20 +11,6 @@ type OpeningHours struct {
 }
 
 func NewOpeningHours(startTime string, closeTime string, weekday string) *OpeningHours {
-	// layout := "2006-01-02T15:04:05Z"
-
-	// startTimeParsed, err := time.Parse(layout, startTime)
-	// if err != nil {
-	// 	fmt.Println("Error al analizar la cadena de tiempo:", err)
-	// 	return nil
-	// }
-
-	// closeTimeParsed, err := time.Parse(layout, closeTime)
-	// if err != nil {
-	// 	fmt.Println("Error al analizar la cadena de tiempo:", err)
-	// 	return nil
-	// }
-
 	return &OpeningHours{
 		StartTime: startTime,
 		CloseTime: closeTime,
@@ -49,15 +35,15 @@ func NewRestArea(openingHours []OpeningHours, id string, retraso uint16) *RestAr
 
 // Definición de la entidad Ruta
 type Route struct {
-	Id             uint16            `json:"id"`
-	ArrivalTime    time.Time         `json:"arrivalTime"`
-	RestAreas      []RestArea        `json:"restAreas"`
-	RouteDistances [][]int16         `json:"routeDistances"`
-	RouteTimes     [][]time.Duration `json:"routeTimes"`
-	TotalDistance  int16             `json:"totalDistance"`
+	Id             uint16    `json:"id"`
+	ArrivalTime    time.Time `json:"arrivalTime"`
+	RestAreas      []string  `json:"restAreas"`
+	RouteDistances []int16   `json:"routeDistances"`
+	RouteTimes     []int16   `json:"routeTimes"`
+	TotalDistance  int16     `json:"totalDistance"`
 }
 
-func NewRoute(id uint16, arrivalTime time.Time, restAreas []RestArea, routeDistances [][]int16, routeTimes [][]time.Duration, totalDistance int16) *Route {
+func NewRoute(id uint16, arrivalTime time.Time, restAreas []string, routeDistances []int16, routeTimes []int16, totalDistance int16) *Route {
 	return &Route{
 		Id:             id,
 		ArrivalTime:    arrivalTime,

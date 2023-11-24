@@ -1,38 +1,14 @@
 [{
     "id": 1,
-    "areas": [{
-        "id": "Granada",
-        "tiempo": 120,
-        "distancia": 80
-    },
-    {
-        "id": "Jaen",
-        "tiempo": 300,
-        "distancia": 200
-    },
-    {
-        "id": "Ciudad Real",
-        "tiempo": 600,
-        "distancia": 400
-    }],
-    "totalDistancia": 680
+    "restAreas": ["Granada", "Jaen", "Ciudad Real"],
+    "totalDistance": 480,
+    "routeDistances": [80, 200, 200],
+    "routeTimes": [60, 150, 150]
 },
 {
     "id": 2,
-    "areas": [{
-        "id": "Ciudad Real",
-        "tiempo": 200,
-        "distancia": 100
-    },
-    {
-        "id": "Madrid",
-        "tiempo": 400,
-        "distancia": 300
-    },
-    {
-        "id": "Zaragoza",
-        "tiempo": 700,
-        "distancia": 500
-    }],
-    "totalDistancia": 700
+    "restAreas": ["Ciudad Real", "Toledo", "Madrid", "Zaragoza"],
+    "totalDistance": 950,
+    "routeDistances": [50, 150, 150, 250],
+    "routeTimes": [50, 120, 120, 200]
 }]

@@ -20,7 +20,7 @@ También es importante diferenciar que se pueden crear los test antes de hacer l
 Trata de desarrollar test unitarios a los que someter funciones concretas de un software para probar su lógica y funcionamiento. El objetivo es conseguir un código limpio y que funcione correctamente.
 
 ### BDD
-Es una evolución de TDD pero que mejora la comunicación entre equipos técnicos y no técnicos. De manera que se centran en el usuario y el comportamiento del sistema, a diferencia de TDD que se centra en funcionalidades.
+Es una evolución de TDD pero que mejora la comunicación entre equipos técnicos y no técnicos. De manera que se centran en el usuario y el comportamiento del sistema, a diferencia de TDD que se centra en funcionalidades. Las pruebas escritas en BDD siguen un formato llamado "Gherkin" que usa palabras clave como Given, When y Then.
 
 #### Ventajas
 - Se describen detalles de cómo se debe comportar la función concreta a desarrollar y de ésta forma será comprensible por todos.
