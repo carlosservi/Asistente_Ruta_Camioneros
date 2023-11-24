@@ -33,11 +33,11 @@ Tras conocer las ventajas y los tipos de metodologías y pensando siempre en el 
 
 ## Herramientas para Test en Golang
 
-- Aserciones.- Golang incluye su propia librería de aserciones, siendo el estándar y la más utilizada.
+- Aserciones.- Golang no incluye su propia librería de aserciones, se puede añadir alguna libreria externa, pero siguiendo los proverbios de Golang de buenas prácticas, es mejor no hacerlo y comprobar con código si se cumple o no.
 
-- Test runner.- Golang incluye también su propio framework de test en Go packages, siendo también el estándar y proporcionando muchas funcionalidades cómo por ejemplo, 'fstest' que sirve para file systems, 'iotest' sirve para test en lecturas y escrituras, 'quick' implementa funciones útiles para ayudarnos y algunas otras más.
+- Test runner.- Golang incluye su propio framework de test en Go packages, siendo también el estándar y proporcionando muchas funcionalidades cómo por ejemplo, 'fstest' que sirve para file systems, 'iotest' sirve para test en lecturas y escrituras, 'quick' implementa funciones útiles para ayudarnos y algunas otras más.
 
-- Herramienta CLI para ejecución.- Como no puede ser de otra manera Golang también se encarga automáticamente de ésto. A través del comando ```go test``` ejecuta automáticamente todos los ficheros de test que tengan un formato y ésten puestos de una manera concreta en el proyecto. A continuación detallo el formato y la estructura para que se ejecuten correctamente con Golang.
+- Herramienta CLI para ejecución.- Como no puede ser de otra manera Golang también se encarga automáticamente de ésto. A través del comando ```go test``` ejecuta automáticamente todos los ficheros de test que tengan un formato y sean puestos de una manera concreta en el proyecto. A continuación detallo el formato y la estructura para que se ejecuten correctamente con Golang.
 
 ### Formato y estructura para los test en Golang
 - Estar en la carpeta test del proyecto
