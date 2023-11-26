@@ -56,9 +56,9 @@ func TestParseRouteJSON(t *testing.T) {
 		expectedRoute := route.Route{
 			Id:                   1,
 			RestAreas:            []string{"Granada", "Jaen", "Ciudad Real"},
-			RouteKmDistances:     []uint16{80, 200, 200},
-			RouteMinutesTimes:    []uint16{60, 150, 150},
-			TotalMinutesDistance: 480,
+			RouteKmDistances:     []uint16{80, 200, 200, 100},
+			RouteMinutesTimes:    []uint16{60, 150, 150, 80},
+			TotalMinutesDistance: 440,
 		}
 
 		if !RouteEqual(parsedRoute[0], expectedRoute) {
