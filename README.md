@@ -47,7 +47,7 @@ Por ejemplo ```make build o task build`` compila el proyecto e ingresa el bin en
 
 Además ese archivo bin lo he incluido en gitignore para que no lo introduzca en el repositorio ya que es muy fácil generarlo.
 
-Para realizar la comprobación **check** 
+Para realizar la comprobación **task check check** 
 
 ```bash
 task check
