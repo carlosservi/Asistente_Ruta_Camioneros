@@ -39,7 +39,7 @@ func main() {
 	}
 
 	// Calcular la ruta óptima
-	optimalRoute, departureTime, err := route.CalculateOptimalRoute(arrivalTime, routes[2], restAreas, descansos)
+	optimalRoute, departureTime, err := route.CalculateOptimalRoute(arrivalTime, routes[1], restAreas, descansos)
 	if err != nil {
 		log.Fatal(err)
 	}

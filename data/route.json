@@ -17,5 +17,12 @@
     "restAreas": ["Ciudad Real", "Toledo", "Madrid", "Zaragoza"],
     "totalMinutesDistance": 540,
     "routeKmDistances": [100, 150, 150, 250, 100],
-    "routeMinutesTimes": [20, 120, 120, 200, 80]
+    "routeMinutesTimes": [20, 120, 280, 200, 80]
+},
+{
+    "id": 4,
+    "restAreas": ["Granada", "Jaen"],
+    "totalMinutesDistance": 200,
+    "routeKmDistances": [80, 150, 20],
+    "routeMinutesTimes": [60, 120, 20]
 }]

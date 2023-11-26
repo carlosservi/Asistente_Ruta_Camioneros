@@ -148,8 +148,8 @@
     "openingHours": [
     {
         "weekday": "Monday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
+        "startTime": "0001-01-01T00:00:00Z",
+        "closeTime": "0001-01-01T23:59:00Z"
     },
     {
         "weekday": "Tuesday",
