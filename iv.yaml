@@ -3,4 +3,5 @@ entidad: src/route.go
 automatizar:
   fichero: "Taskfile.yaml"
   orden: task check
-  test : test/optimizacion_test.go
+  
+test : test/optimizacion_test.go
