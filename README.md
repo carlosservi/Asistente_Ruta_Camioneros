@@ -57,7 +57,7 @@ En el fichero [Metodología y Herramientas para test](docs/metodologia_y_herrami
 He decidido usar la metodología de test unitarios BDD para que el cliente pueda entender lo que hacen los test y la manera de testear las utilidades.
 Además he usado las herramientas nativas y estándares de Go para realizar el testeo y haciendo uso de los proverbios de Go que dicen que lo más efectivo es usar el mínimo de herramientas externas y lo más simplificado posible.
 
-Para realizar el testeo simplemente necesitamos ejecutar:
+Para realizar el testeo simplemente necesitamos ejecutar task check test:
 ```bash
 task test
 ```
