@@ -1,6 +1,9 @@
 package test
 
-import "Asistente_Ruta_Camioneros/src/route"
+import (
+	"Asistente_Ruta_Camioneros/src/route"
+	"testing"
+)
 
 //Función para comparar si dos restAreas son iguales
 func RestAreaEqual(ra1, ra2 route.RestArea) bool {
@@ -108,4 +111,10 @@ func DescansoEqual(d1, d2 route.Descansos) bool {
 	}
 
 	return true
+}
+
+func assertEqual(t *testing.T, result, expected interface{}, message string) {
+	if result != expected {
+		t.Errorf("%s\nGot: %v\nExpected: %v", message, result, expected)
+	}
 }

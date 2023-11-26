@@ -65,9 +65,3 @@ func TestCalculateOptimalRoute(t *testing.T) {
 		assertEqual(t, result[0], expected[0], "Test failed")
 	})
 }
-
-func assertEqual(t *testing.T, result, expected interface{}, message string) {
-	if result != expected {
-		t.Errorf("%s\nGot: %v\nExpected: %v", message, result, expected)
-	}
-}

@@ -1,7 +1,8 @@
 lenguaje: Go
 entidad: src/route.go
+test: test/optimizacion_test.go
+
 automatizar:
   fichero: "Taskfile.yaml"
   orden: task check
   
-test : test/optimizacion_test.go
