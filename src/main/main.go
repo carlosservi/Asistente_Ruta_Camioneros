@@ -2,25 +2,19 @@ package main
 
 import (
 	"Asistente_Ruta_Camioneros/src/route"
+	"fmt"
 	"log"
+	"time"
 )
 
 func main() {
 	// Ruta al archivo JSON
-	filePath := "data/restArea.json"
+	filePath := "data/rest_area.json"
 
 	// Crear el objeto restArea
 	restAreas, err := route.ReadJsonRestAreas(filePath)
 	if err != nil {
 		log.Fatal(err)
-	}
-
-	// Mostrar por la terminal el objeto restAreas
-	for _, restArea := range restAreas {
-		log.Printf("ID: %s, Retraso: %d", restArea.Id, restArea.Retraso)
-		for _, openingHour := range restArea.OpeningHours {
-			log.Printf("  %s: %s - %s", openingHour.Weekday, openingHour.StartTime, openingHour.CloseTime)
-		}
 	}
 
 	// Crear los objetos route
@@ -30,14 +24,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// Mostrar por la terminal el objeto routes
-	for _, route := range routes {
-		log.Printf("ID: %d, Distancia total: %d", route.Id, route.TotalDistance)
-		for _, areas := range route.RestAreas {
-			log.Printf("Area: %s", areas)
-		}
-	}
-
 	// Crear los objetos descansos
 	filePath = "data/descansos.json"
 	descansos, err := route.ReadJsonDescansos(filePath)
@@ -45,9 +31,21 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// Mostrar por la terminal el objeto descansos
-	for _, descanso := range descansos {
-		log.Printf("Nombre: %s, Tiempo: %d, Descanso: %d", descanso.Nombre, descanso.Tiempo, descanso.Descanso)
+	dateTimeString := "2021-05-10T21:00:00Z"
+	arrivalTime, err := time.Parse(time.RFC3339, dateTimeString)
+	if err != nil {
+		fmt.Println("Error al analizar la cadena de tiempo:", err)
+		return
 	}
+
+	// Calcular la ruta óptima
+	optimalRoute, departureTime, err := route.CalculateOptimalRoute(arrivalTime, routes[2], restAreas, descansos)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println("Áreas de descanso en las que parar:", optimalRoute)
+	fmt.Println("Día y Hora de salida:", departureTime.Format("2006-01-02 15:04"))
+	fmt.Println("Día y Hora de llegada:", arrivalTime.Format("2006-01-02 15:04"))
 
 }

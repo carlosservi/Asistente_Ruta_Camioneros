@@ -1,7 +1,0 @@
-[{
-    "id": 1,
-    "restAreas": ["Granada", "Jaen", "Ciudad Real"],
-    "totalDistance": 480,
-    "routeDistances": [80, 200, 200],
-    "routeTimes": [60, 150, 150]
-}]

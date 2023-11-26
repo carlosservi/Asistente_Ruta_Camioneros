@@ -4,6 +4,7 @@ import (
 	"time"
 )
 
+// Definicion de la entidad Horarios de apertura
 type OpeningHours struct {
 	StartTime string `json:"startTime"`
 	CloseTime string `json:"closeTime"`
@@ -22,45 +23,43 @@ func NewOpeningHours(startTime string, closeTime string, weekday string) *Openin
 type RestArea struct {
 	OpeningHours []OpeningHours `json:"openingHours"`
 	Id           string         `json:"id"`
-	Retraso      time.Duration  `json:"retraso"`
+	Retraso      uint16         `json:"retraso"`
 }
 
 func NewRestArea(openingHours []OpeningHours, id string, retraso uint16) *RestArea {
 	return &RestArea{
 		OpeningHours: openingHours,
 		Id:           id,
-		Retraso:      time.Duration(retraso),
+		Retraso:      retraso,
 	}
 }
 
 // Definición de la entidad Ruta
 type Route struct {
-	Id             uint16    `json:"id"`
-	ArrivalTime    time.Time `json:"arrivalTime"`
-	RestAreas      []string  `json:"restAreas"`
-	RouteDistances []int16   `json:"routeDistances"`
-	RouteTimes     []int16   `json:"routeTimes"`
-	TotalDistance  int16     `json:"totalDistance"`
+	Id                   uint16   `json:"id"`
+	RestAreas            []string `json:"restAreas"`            //Areas de descanso con horas de apertura y cierre
+	RouteKmDistances     []uint16 `json:"routeKmDistances"`     //Distancia entre areas de descanso en kilometros, el último valor es la distancia entre el último area de descanso y el destino
+	RouteMinutesTimes    []uint16 `json:"routeMinutesTimes"`    //Tiempo entre areas de descanso en minutos, el último valor es la distancia en minutos entre el último area de descanso y el destino
+	TotalMinutesDistance uint16   `json:"totalMinutesDistance"` //Distancia total de la ruta en minutos
 }
 
-func NewRoute(id uint16, arrivalTime time.Time, restAreas []string, routeDistances []int16, routeTimes []int16, totalDistance int16) *Route {
+func NewRoute(id uint16, arrivalTime time.Time, restAreas []string, routeDistances []uint16, routeTimes []uint16, totalMinutesDistance uint16) *Route {
 	return &Route{
-		Id:             id,
-		ArrivalTime:    arrivalTime,
-		RestAreas:      restAreas,
-		RouteDistances: routeDistances,
-		RouteTimes:     routeTimes,
-		TotalDistance:  totalDistance,
+		Id:                   id,
+		RestAreas:            restAreas,
+		RouteKmDistances:     routeDistances,
+		RouteMinutesTimes:    routeTimes,
+		TotalMinutesDistance: totalMinutesDistance,
 	}
 }
 
 type Descansos struct {
 	Nombre   string `json:"nombre"`
-	Tiempo   int16  `json:"tiempo"`
-	Descanso int16  `json:"descanso"`
+	Tiempo   uint16 `json:"tiempo"`   //Tiempo en minutos hasta el siguiente descanso
+	Descanso uint16 `json:"descanso"` //Tiempo en minutos del descanso
 }
 
-func NewDescansos(nombre string, tiempo int16, descanso int16) *Descansos {
+func NewDescansos(nombre string, tiempo uint16, descanso uint16) *Descansos {
 	return &Descansos{
 		Nombre:   nombre,
 		Tiempo:   tiempo,
@@ -68,4 +67,103 @@ func NewDescansos(nombre string, tiempo int16, descanso int16) *Descansos {
 	}
 }
 
-//Necesito un algoritmo que pasandole una ruta, una lista de areas de descanso y , me devuelva las areas de descanso que se pueden visitar, teniendo en cuenta sus horarios de apertura y cierre
+//Funcion de optimización de ruta
+func CalculateOptimalRoute(arrivalTime time.Time, route Route, restAreas []RestArea, descansos []Descansos) ([]string, time.Time, error) {
+	for _, tiempo := range route.RouteMinutesTimes {
+		for _, descanso := range descansos {
+			if tiempo > descanso.Tiempo {
+				return []string{"No se puede hacer la ruta"}, time.Time{}, nil
+			}
+		}
+	}
+	if descansos[0].Tiempo < route.TotalMinutesDistance {
+		indices := []int{}
+		sumaDescansos := 0
+		suma := 0
+		j := 0
+		i := 0
+		for sumaDescansos < int(route.TotalMinutesDistance) || i < len(route.RouteMinutesTimes) {
+			if (sumaDescansos + suma + int(route.RouteMinutesTimes[i])) <= int(route.TotalMinutesDistance) {
+				if (suma + int(route.RouteMinutesTimes[i])) < int(descansos[j].Tiempo) {
+					suma += int(route.RouteMinutesTimes[i])
+					i++
+					if i == len(route.RouteMinutesTimes) {
+						break
+					}
+				} else {
+					sumaDescansos += suma
+					suma = 0
+					indices = append(indices, i-1)
+					j = (j + 1) % len(descansos)
+				}
+			} else {
+				break
+			}
+		}
+
+		//Introducir el nombre de las restAreas en una lista
+		listaParadas := []string{}
+		for _, indice := range indices {
+			listaParadas = append(listaParadas, route.RestAreas[indice])
+		}
+
+		//Calcular la hora de salida.
+		h := 0
+		tiempoTotalRuta := int(route.TotalMinutesDistance)
+		for _, parada := range listaParadas {
+			area := BuscarRestAreaPorID(restAreas, parada)
+			if area.Retraso > descansos[h].Descanso {
+				tiempoTotalRuta += int(area.Retraso)
+			} else {
+				tiempoTotalRuta += int(descansos[h].Descanso)
+			}
+			h = (h + 1) % len(descansos)
+		}
+		departureTime := arrivalTime.Add(-time.Minute * time.Duration(tiempoTotalRuta))
+		departureTimeAux := departureTime
+		abierto := false
+		//Comprobar si están abiertas las áreas de descanso, en caso contrario, llamar recursivamente a la función, eliminando de las posibles areas las que están cerradas y ajustando el tiempo y los kilometros de la ruta
+		for i, parada := range route.RestAreas {
+			if ExisteParada(listaParadas, parada) {
+				departureTimeAux = departureTimeAux.Add(time.Minute * time.Duration(route.RouteMinutesTimes[i]))
+				dia := departureTimeAux.Weekday()
+				area := BuscarRestAreaPorID(restAreas, parada)
+				horario := GetOpeningHoursByWeekday(area, dia)
+				if horario == nil {
+					abierto = false
+				} else {
+					abierto = ComprobarSiEstaAbiertaElArea(horario, departureTimeAux)
+				}
+				if !abierto {
+					//Necesito eliminar de la ruta la parada que está cerrada, además de incrementarle el tiempo a la siguiente y los kilometros
+					km := route.RouteKmDistances[i]
+					minutos := route.RouteMinutesTimes[i]
+
+					//Eliminar de la ruta
+					route.RouteKmDistances = append(route.RouteKmDistances[:i], route.RouteKmDistances[i+1:]...)
+					route.RouteMinutesTimes = append(route.RouteMinutesTimes[:i], route.RouteMinutesTimes[i+1:]...)
+					//Incrementar el tiempo y los kilometros de la siguiente parada
+					route.RouteKmDistances[i] += km
+					route.RouteMinutesTimes[i] += minutos
+					//Llamar recursivamente a la función
+					return CalculateOptimalRoute(arrivalTime, route, restAreas, descansos)
+
+				}
+				// fmt.Println("Abierto: ", abierto)
+				// fmt.Print("Dia: ", horario.Weekday, " Horario: ", horario.StartTime, " - ", horario.CloseTime, "\n")
+				// fmt.Println("Parada: ", parada)
+				// fmt.Print("Hora de llegada a la parada: ", departureTimeAux.Format("2006-01-02 15:04"), "\n")
+			} else {
+				departureTimeAux = departureTimeAux.Add(time.Minute * time.Duration(route.RouteMinutesTimes[i]))
+				// fmt.Println("No se para en: ", parada)
+				// fmt.Print("Hora de llegada a la parada: ", departureTimeAux.Format("2006-01-02 15:04"), "\n")
+			}
+		}
+
+		return listaParadas, departureTime, nil
+	} else {
+		//Se puede hacer la ruta sin descanso
+		departureTime := arrivalTime.Add(-time.Minute * time.Duration(route.TotalMinutesDistance))
+		return []string{"No es necesario parar"}, departureTime, nil
+	}
+}
