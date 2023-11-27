@@ -24,12 +24,19 @@ Es una evolución de TDD pero que mejora la comunicación entre equipos técnico
 
 #### Ventajas
 - Se describen detalles de cómo se debe comportar la función concreta a desarrollar y de ésta forma será comprensible por todos.
--Mejora la comunicación entre desarrolladores, testers, usuarios y la dirección.
--El enfoque de definición ayuda a una aceptación común de las funcionalidades previamente al desarrollo.
+- Mejora la comunicación entre desarrolladores, testers, usuarios y la dirección.
+- El enfoque de definición ayuda a una aceptación común de las funcionalidades previamente al desarrollo.
 
 ### Conclusión
 Tras conocer las ventajas y los tipos de metodologías y pensando siempre en el cliente, la metodología BDD es mucho mejor ya que ayuda mucho a la comunicación con el cliente y a la comprensión de éste acerca del proyecto y sus funcionalidades.
 
+## Criterios para elegir las Herramientas de Test
+- Compatibilidad con el lenguaje de programación.
+- Estandarización y Buenas prácticas del lenguaje
+- Facilidad de uso
+- Comunidad y soporte
+- Rendimiento
+- Flexibilidad y extensibilidad
 
 ## Herramientas para Test en Golang
 
