@@ -33,7 +33,6 @@ Tras conocer las ventajas y los tipos de metodologías y pensando siempre en el 
 ## Criterios para elegir las Herramientas de Test
 - Compatibilidad con el lenguaje de programación.
 - Estandarización y Buenas prácticas del lenguaje
-- Facilidad de uso
 - Comunidad y soporte
 - Rendimiento
 - Flexibilidad y extensibilidad
