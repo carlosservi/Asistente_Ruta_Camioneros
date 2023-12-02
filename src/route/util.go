@@ -48,7 +48,6 @@ func ReadJsonDescansos(filePath string) ([]Descansos, error) {
 	return descansos, nil
 }
 
-//Función para buscar restArea por ID
 func BuscarRestAreaPorID(array []RestArea, idBuscado string) RestArea {
 	for _, restArea := range array {
 		if restArea.Id == idBuscado {
@@ -58,7 +57,6 @@ func BuscarRestAreaPorID(array []RestArea, idBuscado string) RestArea {
 	return RestArea{}
 }
 
-//Función para ver es una de las paradas elegida para hacer el descanso, lo que hace es ver si está en el array de paradas
 func ExisteParada(array []string, parada string) bool {
 	for _, area := range array {
 		if area == parada {
@@ -68,7 +66,6 @@ func ExisteParada(array []string, parada string) bool {
 	return false
 }
 
-//Función que devuelve el horario de una área de servicio un dia concreto
 func GetOpeningHoursByWeekday(restArea RestArea, weekday time.Weekday) *OpeningHours {
 	for i := range restArea.OpeningHours {
 		if restArea.OpeningHours[i].Weekday == weekday.String() {
@@ -78,7 +75,6 @@ func GetOpeningHoursByWeekday(restArea RestArea, weekday time.Weekday) *OpeningH
 	return nil
 }
 
-//Función que comprueba si una área de servicio está abierta un dia concreto y en un horario
 func ComprobarSiEstaAbiertaElArea(horario *OpeningHours, arrivalTime time.Time) bool {
 	start, _ := time.Parse(time.RFC3339, horario.StartTime)
 	close, _ := time.Parse(time.RFC3339, horario.CloseTime)

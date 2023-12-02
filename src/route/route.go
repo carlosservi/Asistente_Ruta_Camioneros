@@ -149,14 +149,8 @@ func CalculateOptimalRoute(arrivalTime time.Time, route Route, restAreas []RestA
 					return CalculateOptimalRoute(arrivalTime, route, restAreas, descansos)
 
 				}
-				// fmt.Println("Abierto: ", abierto)
-				// fmt.Print("Dia: ", horario.Weekday, " Horario: ", horario.StartTime, " - ", horario.CloseTime, "\n")
-				// fmt.Println("Parada: ", parada)
-				// fmt.Print("Hora de llegada a la parada: ", departureTimeAux.Format("2006-01-02 15:04"), "\n")
 			} else {
 				departureTimeAux = departureTimeAux.Add(time.Minute * time.Duration(route.RouteMinutesTimes[i]))
-				// fmt.Println("No se para en: ", parada)
-				// fmt.Print("Hora de llegada a la parada: ", departureTimeAux.Format("2006-01-02 15:04"), "\n")
 			}
 		}
 
