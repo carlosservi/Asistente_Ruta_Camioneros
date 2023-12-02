@@ -75,6 +75,7 @@ func GetOpeningHoursByWeekday(restArea RestArea, weekday time.Weekday) *OpeningH
 	return nil
 }
 
+//Función que comprueba si una área de servicio está abierta un dia concreto y en un horario
 func ComprobarSiEstaAbiertaElArea(horario *OpeningHours, arrivalTime time.Time) bool {
 	start, _ := time.Parse(time.RFC3339, horario.StartTime)
 	close, _ := time.Parse(time.RFC3339, horario.CloseTime)

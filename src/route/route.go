@@ -23,10 +23,10 @@ func NewOpeningHours(startTime string, closeTime string, weekday string) *Openin
 type RestArea struct {
 	OpeningHours []OpeningHours `json:"openingHours"`
 	Id           string         `json:"id"`
-	Retraso      uint16         `json:"retraso"`
+	Retraso      int            `json:"retraso"`
 }
 
-func NewRestArea(openingHours []OpeningHours, id string, retraso uint16) *RestArea {
+func NewRestArea(openingHours []OpeningHours, id string, retraso int) *RestArea {
 	return &RestArea{
 		OpeningHours: openingHours,
 		Id:           id,
@@ -36,14 +36,14 @@ func NewRestArea(openingHours []OpeningHours, id string, retraso uint16) *RestAr
 
 // Definición de la entidad Ruta
 type Route struct {
-	Id                   uint16   `json:"id"`
+	Id                   int      `json:"id"`
 	RestAreas            []string `json:"restAreas"`            //Areas de descanso con horas de apertura y cierre
-	RouteKmDistances     []uint16 `json:"routeKmDistances"`     //Distancia entre areas de descanso en kilometros, el último valor es la distancia entre el último area de descanso y el destino
-	RouteMinutesTimes    []uint16 `json:"routeMinutesTimes"`    //Tiempo entre areas de descanso en minutos, el último valor es la distancia en minutos entre el último area de descanso y el destino
-	TotalMinutesDistance uint16   `json:"totalMinutesDistance"` //Distancia total de la ruta en minutos
+	RouteKmDistances     []int    `json:"routeKmDistances"`     //Distancia entre areas de descanso en kilometros, el último valor es la distancia entre el último area de descanso y el destino
+	RouteMinutesTimes    []int    `json:"routeMinutesTimes"`    //Tiempo entre areas de descanso en minutos, el último valor es la distancia en minutos entre el último area de descanso y el destino
+	TotalMinutesDistance int      `json:"totalMinutesDistance"` //Distancia total de la ruta en minutos
 }
 
-func NewRoute(id uint16, arrivalTime time.Time, restAreas []string, routeDistances []uint16, routeTimes []uint16, totalMinutesDistance uint16) *Route {
+func NewRoute(id int, arrivalTime time.Time, restAreas []string, routeDistances []int, routeTimes []int, totalMinutesDistance int) *Route {
 	return &Route{
 		Id:                   id,
 		RestAreas:            restAreas,
@@ -55,11 +55,11 @@ func NewRoute(id uint16, arrivalTime time.Time, restAreas []string, routeDistanc
 
 type Descansos struct {
 	Nombre   string `json:"nombre"`
-	Tiempo   uint16 `json:"tiempo"`   //Tiempo en minutos hasta el siguiente descanso
-	Descanso uint16 `json:"descanso"` //Tiempo en minutos del descanso
+	Tiempo   int    `json:"tiempo"`   //Tiempo en minutos hasta el siguiente descanso
+	Descanso int    `json:"descanso"` //Tiempo en minutos del descanso
 }
 
-func NewDescansos(nombre string, tiempo uint16, descanso uint16) *Descansos {
+func NewDescansos(nombre string, tiempo int, descanso int) *Descansos {
 	return &Descansos{
 		Nombre:   nombre,
 		Tiempo:   tiempo,
@@ -82,10 +82,10 @@ func CalculateOptimalRoute(arrivalTime time.Time, route Route, restAreas []RestA
 		suma := 0
 		j := 0
 		i := 0
-		for sumaDescansos < int(route.TotalMinutesDistance) || i < len(route.RouteMinutesTimes) {
-			if (sumaDescansos + suma + int(route.RouteMinutesTimes[i])) <= int(route.TotalMinutesDistance) {
-				if (suma + int(route.RouteMinutesTimes[i])) < int(descansos[j].Tiempo) {
-					suma += int(route.RouteMinutesTimes[i])
+		for sumaDescansos < route.TotalMinutesDistance || i < len(route.RouteMinutesTimes) {
+			if (sumaDescansos + suma + route.RouteMinutesTimes[i]) <= route.TotalMinutesDistance {
+				if (suma + route.RouteMinutesTimes[i]) < descansos[j].Tiempo {
+					suma += route.RouteMinutesTimes[i]
 					i++
 					if i == len(route.RouteMinutesTimes) {
 						break
@@ -113,9 +113,9 @@ func CalculateOptimalRoute(arrivalTime time.Time, route Route, restAreas []RestA
 		for _, parada := range listaParadas {
 			area := BuscarRestAreaPorID(restAreas, parada)
 			if area.Retraso > descansos[h].Descanso {
-				tiempoTotalRuta += int(area.Retraso)
+				tiempoTotalRuta += area.Retraso
 			} else {
-				tiempoTotalRuta += int(descansos[h].Descanso)
+				tiempoTotalRuta += descansos[h].Descanso
 			}
 			h = (h + 1) % len(descansos)
 		}

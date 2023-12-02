@@ -56,8 +56,8 @@ func TestParseRouteJSON(t *testing.T) {
 		expectedRoute := route.Route{
 			Id:                   1,
 			RestAreas:            []string{"Granada", "Jaen", "Ciudad Real"},
-			RouteKmDistances:     []uint16{80, 200, 200, 100},
-			RouteMinutesTimes:    []uint16{60, 150, 150, 80},
+			RouteKmDistances:     []int{80, 200, 200, 100},
+			RouteMinutesTimes:    []int{60, 150, 150, 80},
 			TotalMinutesDistance: 440,
 		}
 
@@ -97,7 +97,7 @@ func TestBuscarRestAreaPorID(t *testing.T) {
 		filePath := "../data/rest_area_test.json"
 		restAreas, _ := route.ReadJsonRestAreas(filePath)
 
-		idBuscado := "Granada" // ID to search
+		idBuscado := "Granada"
 
 		// When searching for RestArea by ID
 		foundRestArea := route.BuscarRestAreaPorID(restAreas, idBuscado)
@@ -199,11 +199,11 @@ func TestComprobarSiEstaAbiertaElArea(t *testing.T) {
 	horario := &route.OpeningHours{
 		StartTime: "2023-11-23T08:00:00Z",
 		CloseTime: "2023-11-23T18:00:00Z",
-		Weekday:   "Monday", // No se usa en esta función, pero puedes incluirlo si es necesario
+		Weekday:   "Monday",
 	}
 
 	// When trying to check if the area is open at a specific arrival time
-	arrivalTime := time.Date(2023, 11, 23, 12, 0, 0, 0, time.UTC) // Ajusta la hora según tus necesidades
+	arrivalTime := time.Date(2023, 11, 23, 12, 0, 0, 0, time.UTC)
 
 	result := route.ComprobarSiEstaAbiertaElArea(horario, arrivalTime)
 
