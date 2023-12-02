@@ -1,4 +1,4 @@
 module Asistente_Ruta_Camioneros
 
-go 1.18
+go 1.21
 
