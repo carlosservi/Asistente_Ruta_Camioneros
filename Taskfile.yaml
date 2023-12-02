@@ -4,7 +4,6 @@ tasks:
   build:
     cmds:
       - echo "Compilando el proyecto..."
-      - go build -o ./bin/Asistente_Ruta_Camioneros ./src/main/*.go
       - go build -o ./bin/Asistente_Ruta_Camioneros ./src/route/*.go
       - echo "Listo."
 
@@ -19,8 +18,7 @@ tasks:
       - build
     cmds:
       - echo "Ejecutando el proyecto..."
-      - go run ./src/main/main.go
-      #- ./bin/Asistente_Ruta_Camioneros
+      - ./bin/Asistente_Ruta_Camioneros
 
   test:
     cmds:
@@ -33,3 +31,4 @@ tasks:
       - echo "Comprobando sintaxis..."
       - go vet ./...
       - echo "Listo."
+
