@@ -1,0 +1,28 @@
+[{
+    "id": 1,
+    "restAreas": ["Granada", "Jaen", "Ciudad Real"],
+    "totalMinutesDistance": 440,
+    "routeKmDistances": [80, 200, 200, 100],
+    "routeMinutesTimes": [60, 150, 150, 80]
+},
+{
+    "id": 2,
+    "restAreas": ["Ciudad Real", "Toledo", "Madrid", "Zaragoza"],
+    "totalMinutesDistance": 620,
+    "routeKmDistances": [100, 150, 150, 250, 100],
+    "routeMinutesTimes": [100, 120, 120, 200, 80]
+},
+{
+    "id": 3,
+    "restAreas": ["Ciudad Real", "Toledo", "Madrid", "Zaragoza"],
+    "totalMinutesDistance": 540,
+    "routeKmDistances": [100, 150, 150, 250, 100],
+    "routeMinutesTimes": [20, 120, 280, 200, 80]
+},
+{
+    "id": 4,
+    "restAreas": ["Granada", "Jaen"],
+    "totalMinutesDistance": 200,
+    "routeKmDistances": [80, 150, 20],
+    "routeMinutesTimes": [60, 120, 20]
+}]

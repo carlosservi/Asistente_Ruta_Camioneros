@@ -1,0 +1,15 @@
+[{
+    "id": "Granada",
+    "openingHours": [
+    {
+        "weekday":   "time.Saturday",
+        "startTime": "2023-11-23T10:00:00Z",
+        "closeTime": "2023-11-23T23:00:00Z"
+    },
+    {
+        "weekday":   "time.Sunday",
+        "startTime": "2023-11-23T10:00:00Z",
+        "closeTime": "2023-11-23T17:00:00Z"
+    }],
+    "retraso": 30
+}]

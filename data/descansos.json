@@ -1,0 +1,10 @@
+[{
+    "nombre": "Descanso 1",
+    "tiempo": 270,
+    "descanso": 45
+},
+{
+    "nombre": "Descanso 2",
+    "tiempo": 270,
+    "descanso": 660
+}]

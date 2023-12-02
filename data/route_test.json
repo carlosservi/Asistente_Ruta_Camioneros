@@ -1,0 +1,7 @@
+[{
+    "id": 1,
+    "restAreas": ["Granada", "Jaen", "Ciudad Real"],
+    "totalMinutesDistance": 440,
+    "routeKmDistances": [80, 200, 200, 100],
+    "routeMinutesTimes": [60, 150, 150, 80]
+}]
