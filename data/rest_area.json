@@ -1,210 +1,218 @@
-[{
-    "id": "Granada",
-    "openingHours": [
+[
     {
-        "weekday": "time.Monday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
+        "id": "Granada",
+        "openingHours": [
+            {
+                "weekday": "Monday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            },
+            {
+                "weekday": "Tuesday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            },
+            {
+                "weekday": "Wednesday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            },
+            {
+                "weekday": "Thursday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            },
+            {
+                "weekday": "Friday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T23:00:00Z"
+            },
+            {
+                "weekday": "Saturday",
+                "startTime": "10:00",
+                "closeTime": "0001-01-01T23:00:00Z"
+            },
+            {
+                "weekday": "Sunday",
+                "startTime": "0001-01-01T10:00:00Z",
+                "closeTime": "0001-01-01T17:00:00Z"
+            }
+        ],
+        "retraso": 30
     },
     {
-        "weekday": "time.Tuesday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
+        "id": "Jaen",
+        "openingHours": [
+            {
+                "weekday": "Monday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            },
+            {
+                "weekday": "Wednesday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            },
+            {
+                "weekday": "Thursday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            },
+            {
+                "weekday": "Friday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            }
+        ],
+        "retraso": 25
     },
     {
-        "weekday":   "time.Wednesday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
+        "id": "Ciudad Real",
+        "openingHours": [
+            {
+                "weekday": "Monday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Tuesday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Wednesday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Thursday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Friday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Saturday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Sunday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            }
+        ],
+        "retraso": 45
     },
     {
-        "weekday":   "time.Thursday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
+        "id": "Toledo",
+        "openingHours": [
+            {
+                "weekday": "Monday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Tuesday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Wednesday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Thursday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Friday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Saturday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Sunday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            }
+        ],
+        "retraso": 30
     },
     {
-        "weekday":   "time.Friday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T23:00:00Z"
+        "id": "Madrid",
+        "openingHours": [
+            {
+                "weekday": "Monday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Tuesday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            },
+            {
+                "weekday": "Wednesday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            },
+            {
+                "weekday": "Thursday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            },
+            {
+                "weekday": "Friday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T23:00:00Z"
+            },
+            {
+                "weekday": "Saturday",
+                "startTime": "0001-01-01T00:10:00Z",
+                "closeTime": "0001-01-01T23:00:00Z"
+            },
+            {
+                "weekday": "Sunday",
+                "startTime": "0001-01-01T10:00:00Z",
+                "closeTime": "0001-01-01T17:00:00Z"
+            }
+        ],
+        "retraso": 60
     },
     {
-        "weekday":   "time.Saturday",
-        "startTime": "10:00",
-        "closeTime": "0001-01-01T23:00:00Z"
-    },
-    {
-        "weekday":   "time.Sunday",
-        "startTime": "0001-01-01T10:00:00Z",
-        "closeTime": "0001-01-01T17:00:00Z"
-    }],
-    "retraso": 30
-},
-{
-    "id": "Jaen",
-    "openingHours": [
-    {
-        "weekday":   "time.Monday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
-    },
-    {
-        "weekday":   "time.Wednesday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
-    },
-    {
-        "weekday":   "time.Thursday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
-    },
-    {
-        "weekday":   "time.Friday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
-    }],
-    "retraso": 25
-},
-{
-    "id": "Ciudad Real",
-    "openingHours": [
-    {
-        "weekday":   "time.Monday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Tuesday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Wednesday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Thursday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Friday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Saturday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Sunday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    }],
-    "retraso": 45
-},
-{
-    "id": "Toledo",
-    "openingHours": [
-    {
-        "weekday":   "time.Monday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Tuesday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Wednesday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Thursday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Friday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Saturday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Sunday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    }],
-    "retraso": 30
-},
-{
-    "id": "Madrid",
-    "openingHours": [
-    {
-        "weekday":   "time.Monday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Tuesday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
-    },
-    {
-        "weekday":   "time.Wednesday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
-    },
-    {
-        "weekday":   "time.Thursday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
-    },
-    {
-        "weekday":   "time.Friday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T23:00:00Z"
-    },
-    {
-        "weekday":   "time.Saturday",
-        "startTime": "0001-01-01T00:10:00Z",
-        "closeTime": "0001-01-01T23:00:00Z"
-    },
-    {
-        "weekday":   "time.Sunday",
-        "startTime": "0001-01-01T10:00:00Z",
-        "closeTime": "0001-01-01T17:00:00Z"
-    }],
-    "retraso": 60
-},
-{
-    "id": "Zaragoza",
-    "openingHours": [
-    {
-        "weekday":   "time.Monday",
-        "startTime": "0001-01-01T00:00:00Z",
-        "closeTime": "0001-01-01T23:59:00Z"
-    },
-    {
-        "weekday":   "time.Wednesday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
-    },
-    {
-        "weekday":   "time.Thursday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
-    },
-    {
-        "weekday":   "time.Friday",
-        "startTime": "0001-01-01T08:00:00Z",
-        "closeTime": "0001-01-01T22:00:00Z"
-    }],
-    "retraso": 25
-}]
+        "id": "Zaragoza",
+        "openingHours": [
+            {
+                "weekday": "Monday",
+                "startTime": "0001-01-01T00:00:00Z",
+                "closeTime": "0001-01-01T23:59:00Z"
+            },
+            {
+                "weekday": "Wednesday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            },
+            {
+                "weekday": "Thursday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            },
+            {
+                "weekday": "Friday",
+                "startTime": "0001-01-01T08:00:00Z",
+                "closeTime": "0001-01-01T22:00:00Z"
+            }
+        ],
+        "retraso": 25
+    }
+]

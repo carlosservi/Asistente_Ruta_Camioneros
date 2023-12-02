@@ -147,7 +147,6 @@ func CalculateOptimalRoute(arrivalTime time.Time, route Route, restAreas []RestA
 					route.RouteMinutesTimes[i] += minutos
 					//Llamar recursivamente a la función
 					return CalculateOptimalRoute(arrivalTime, route, restAreas, descansos)
-
 				}
 			} else {
 				departureTimeAux = departureTimeAux.Add(time.Minute * time.Duration(route.RouteMinutesTimes[i]))
