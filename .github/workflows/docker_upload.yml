@@ -13,8 +13,8 @@ jobs:
     name: Subir la imagen de Docker a Docker Hub
     runs-on: ubuntu-latest
     steps:
-      - name: Clonar el codigo del repositorio cuando se modifique el main
-        uses: actions/checkout@main
+      - name: Clonar el codigo del repositorio cuando se modifique
+        uses: actions/checkout@v4
 
       - name: Crear y subir el contenedor actualizado a Docker Hub
         uses: docker/build-push-action@v5
@@ -23,5 +23,6 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
           repository: ${{ github.repository }} 
           tag_with_ref: true
-          tag_with_sha: true
-          tags: ${{ github.sha }}
+          tags: |
+            ${{ github.ref }}
+            latest
