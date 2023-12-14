@@ -61,3 +61,16 @@ Para realizar el testeo simplemente necesitamos ejecutar task check test:
 ```bash
 task test
 ```
+
+#### Docker
+Se pueden ejecutar los test mediante Docker con el siguiente comando:
+```bash
+docker build -t carlosservi/asistente-ruta-camioneros . && docker run -t -v `pwd`:/app/test carlosservi/asistente-ruta-camioneros
+```
+También tenemos el contenedor publicado en [Docker Hub - carlosservi](https://hub.docker.com/repository/docker/carlosservi/asistente-ruta-camioneros/):
+```bash
+docker run -t -v `pwd`:/app/test carlosservi/asistente-ruta-camioneros:latest
+```
+
+
+
