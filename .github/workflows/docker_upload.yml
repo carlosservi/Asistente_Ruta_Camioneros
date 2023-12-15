@@ -25,5 +25,8 @@ jobs:
       - name: Crear y subir el contenedor actualizado a Docker Hub
         uses: docker/build-push-action@v5
         with:
+          context: .
+          file: ./Dockerfile
           push: true
-          tags: carlosservi/asistente_ruta_camioneros:latest 
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
