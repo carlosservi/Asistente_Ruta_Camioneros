@@ -29,4 +29,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tag_with_ref: true
-          tags: carlosservi/asistente_ruta_camioneros:latest
+          tags: |
+            carlosservi/asistente_ruta_camioneros:latest
+            carlosservi/asistente_ruta_camioneros:${{ github.sha }}
