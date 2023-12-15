@@ -5,7 +5,7 @@ LABEL version="1.0" \
 
 RUN adduser --disabled-password -u 1001 gouser
 
-USER goguser
+USER gouser
 
 WORKDIR /app/test
 
