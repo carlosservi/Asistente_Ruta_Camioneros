@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: carlosservi/asistente_ruta_camioneros:latest
+          tags: carlosservi/asistente_ruta_camioneros:latest 
