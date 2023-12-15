@@ -69,7 +69,7 @@ docker build -t carlosservi/asistente-ruta-camioneros . && docker run -t -v `pwd
 ```
 También tenemos el contenedor publicado en [Docker Hub - carlosservi](https://hub.docker.com/repository/docker/carlosservi/asistente-ruta-camioneros/):
 ```bash
-docker run -t -v `pwd`:/app/test carlosservi/asistente-ruta-camioneros:latest
+docker run -t -v `pwd`:/app/test carlosservi/asistente_ruta_camioneros:latest
 ```
 
 
