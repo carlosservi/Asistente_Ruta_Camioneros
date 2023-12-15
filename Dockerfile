@@ -1,5 +1,9 @@
 FROM golang:1.21-alpine
 
+RUN adduser --disabled-password -u 1001 user
+
+USER user
+
 WORKDIR /app/test
 
 COPY go.mod go.sum ./
