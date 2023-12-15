@@ -1,17 +1,23 @@
-FROM golang:latest AS builder
 FROM debian:stable-slim AS final
 
 LABEL version="1.0" \
       maintainer="carlosservi@correo.ugr.es"
 
+# Actualiza la lista de paquetes e instala las dependencias necesarias
+RUN apt-get update && apt-get install -y wget tar
+
+# Descarga e instala Go
+ENV GO_VERSION 1.21
+RUN wget https://golang.org/dl/go$GO_VERSION.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz && \
+    rm go$GO_VERSION.linux-amd64.tar.gz
+
+# Configura las variables de entorno
+ENV PATH=$PATH:/usr/local/go/bin
+ENV GOPATH=$HOME/go
+ENV PATH=$PATH:$GOPATH/bin
+
 WORKDIR /app
-
-# Instalamos Go
-COPY --from=golang:latest /usr/local/go/ /usr/local/go/
-ENV PATH="/usr/local/go/bin:${PATH}"
-
-# Incluimos los certificados
-COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 RUN adduser --disabled-password -u 1001 gouser
 
