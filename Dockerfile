@@ -1,8 +1,11 @@
 FROM golang:1.21-alpine
 
-RUN adduser --disabled-password -u 1001 user
+LABEL version="1.0" \
+      maintainer="carlosservi@correo.ugr.es"
 
-USER user
+RUN adduser --disabled-password -u 1001 gouser
+
+USER goguser
 
 WORKDIR /app/test
 
@@ -10,5 +13,4 @@ COPY go.mod go.sum ./
 
 RUN go mod download && go install github.com/go-task/task/v3/cmd/task@latest
 
-ENTRYPOINT ["task"]
-CMD ["test"]
+ENTRYPOINT ["task", "test"]
