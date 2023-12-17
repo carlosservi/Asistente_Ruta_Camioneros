@@ -3,9 +3,9 @@ FROM golang:latest AS builder
 
 COPY --from=golang:latest /usr/local/go/ /usr/local/go/
 
-ENV PATH=$PATH:/usr/local/go/bin \
-    GOPATH=/go \
-    PATH=$PATH:/go/bin
+ENV PATH=$PATH:/usr/local/go/bin
+ENV GOPATH=$HOME/go
+ENV PATH=$PATH:$GOPATH/bin
 
 WORKDIR /app
 
