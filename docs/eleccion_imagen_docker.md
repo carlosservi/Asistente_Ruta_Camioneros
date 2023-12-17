@@ -17,6 +17,8 @@
 
 - Debian-slim: Existe una imagen de Debian slim que pesa menos ya que incluye el SO más básico, que incorporandole las herramientas necesarias sería mucho mas liviano que la imagen Debian normal. No tiene vulnerabilidades graves y se actualiza constantemente. Respecto a la seguridad mantiene las mismas que la versión normal.
 
+- bitnami/golang: Ésta no es una imagen oficial pero tiene muy buena reputación, además actualiza constantemente el repositorio y está muy pendiente a los repositorios padres para realizar las actualizaciones oportunas. Ocupa 600MB por lo que no es muy liviana e incluye herramientas que no necesito. Debajo usa Debian por lo que respecto a la seguridad mantiene las vulnerabilidades de Debian.
+
 ## Decisión
 Tal y como dicen los criterios de decisión, voy a usar la `imagen de Debian slim e instalaré las herramientas necesarias` instalaré las herramientas necesarias, ya que es más segura. Al usar la versión slim es muy liviana también.
 
