@@ -23,13 +23,13 @@ jobs:
         go-version: ${{ matrix.go-version }}
 
     - name: Install task
-    run: |
-      curl -sL https://taskfile.dev/install.sh | sh
-      mkdir -p $HOME/bin  # Crear el directorio binario si no existe
-      mv ./bin/task $HOME/bin/task
-      task --version
-      export PATH=$PATH:$HOME/bin 
-      echo 'export PATH=$PATH:$HOME/bin' >> $HOME/.bashrc 
+      run: |
+        curl -sL https://taskfile.dev/install.sh | sh
+        mkdir -p $HOME/bin  # Crear el directorio binario si no existe
+        mv ./bin/task $HOME/bin/task
+        task --version
+        export PATH=$PATH:$HOME/bin 
+        echo 'export PATH=$PATH:$HOME/bin' >> $HOME/.bashrc 
 
 
     - name: Run tests
