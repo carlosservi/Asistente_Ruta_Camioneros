@@ -23,9 +23,6 @@ jobs:
         go-version: ${{ matrix.go-version }}
 
     - name: Run tests
-      run: task test
-
-    - name: Run tests
       run: go test -v ./test/...
 
     - name: Display Go version
