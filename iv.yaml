@@ -7,6 +7,6 @@ automatizar:
   orden: task check
 
 CI:
-  - .github/workflows/test_CI.yml
+  - .github/workflows/test_ci.yml
   - .semaphore/semaphore.yml
   
