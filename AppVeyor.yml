@@ -1,19 +1,18 @@
-version: 1.0.0.{build}
-skip_branch_with_pr: true
-build: off
+version: 1.0.{build}
+
+image: Ubuntu
 
 environment:
   matrix:
-    - GO_VERSION: "120"
-    - GO_VERSION: "121"
+    - GO_VERSION: '1.20'
+    - GO_VERSION: '1.21'
 
-  GOPATH: c:\gopath
+clone_folder: c:\gopath\src\carlosservi/asistente_ruta_camioneros
 
-before_test:
-  - set PATH=C:\go%GO_VERSION%\bin;%PATH%
-  - set GOROOT=C:\go%GO_VERSION%
+build_script:
+  - ps: Install-Product node $env:GO_VERSION
+  - ps: go version
+  - ps: go get -v ./...
 
 test_script:
-  - go version
-  - go env
-  - go run ./build/ -v test
+  - ps: go test -v ./test/...
