@@ -1,0 +1,18 @@
+version: 1.0.{build}
+
+image: Ubuntu
+
+environment:
+  matrix:
+    - GO_VERSION: '1.20'
+    - GO_VERSION: '1.21'
+
+clone_folder: c:\gopath\src\%APPVEYOR_REPO_NAME%
+
+build_script:
+  - ps: Install-Product node $env:GO_VERSION
+  - ps: go version
+  - ps: go get -v ./...
+
+test_script:
+  - ps: go test -v ./test/...

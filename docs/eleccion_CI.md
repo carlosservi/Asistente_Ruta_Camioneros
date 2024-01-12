@@ -9,14 +9,13 @@
 - Github Actions.- Es una opción integrada en Github, gratuita e ilimitada. Tiene compatibilidad con todos los lenguajes y completamente integrable con Docker, además siempre está disponible. Es muy configurable y adaptable.
 - Semaphore CI.- Se puede integrar con Github, no es gratuito pero tiene un periodo de prueba de 14 días. Admite el lenguaje Golang. Es integrable con Docker y está disponible online. Además tiene una interfaz gráfica muy amigable y sencilla para configurarlo.
 - Circle CI.- No se puede integrar con la API Checks de Github por el momento (link)[https://circleci.com/docs/enable-checks/], Es compatible con Golang y Docker. Tiene un plan gratuito para un tiempo especifico al mes, por lo que podría ser útil para proyectos en desarrollo. También es Online y está siempre disponible.
-- TeamCity CI.- Es propiedad de JBrains, voy a probar la opción cloud para que siempre esté disponible. Se integra perfectamente con github y se puede usar con cualquier tecnología. Sólo tengo un periodo de prueba de 14 días. Existe la version local que es gratuita pero dependerá de tenerlo encendido para que se ejecute por lo que por el momento voy a probar la versión cloud. 
-
+- AppVeyor CI.- Es una sólida elección para tu CI, ya que es compatible con la API de GitHub Checks, gratuito y cuenta con soporte para Golang. Además, su integración con Docker es sencilla, permitiendo ejecutar tus contenedores Dockerizados. El plan gratuito permite un número limitado de minutos de construcción por mes y un número limitado de ejecuciones concurrentes
 ## Pruebas
-Por el momento descarto Circle CI ya que por el momento no puede usar la API Github Checks por lo que no me sirve, voy a probar las otras 3 opciones y decidiré.
+Voy a probar las siguientes tres opciones:
 
 - Githubs Actions.- He configurado un github actions para que ejecute los test automaticamente cada vez que hago un push.
 - Semaphore.- Me he registrado en Semaphore, lo he conectado con el repo de github, he creado el yml y lo he conectado mediante la interfaz gráfica.
-- TeamCity.- Me he conectado a github a través de TeamCity y se conecta muy fácil y es muy fácilmente configurable, simplemente añades el proyecto de github que quieras, y luego configuras una nueva tarea de compilación. Yo he creado una que ejecuta go test con la versión 1.20 y 1.21. Luego creo un trigger para que cada vez que hago un push se realicen las pruebas oportunas. Todo ello mediante una interfaz gráfica muy amigable y fácil.
+- AppVeyor.- Me he registrado en AppVeyor, he configurado el repositorio instalado la aplicación y he incluido un archivo yml de configuración en el proyecto para que cada vez que realice un push pase los test con la version 1.20 y 1.21 de Go.
 
 ## Elección CI tool
-Voy a usar Githubs Action porque es muy fácil y rápido, además Semaphore solo te da 14 días gratis para usar su producto y para que me sirva para más tiempo me quedo con Githubs Actions.
+Voy a usar Githubs Action porque es muy fácil y rápido, además Semaphore solo te da 14 días gratis para usar su producto y para que me sirva para más tiempo me quedo con Githubs Actions. AppVeyor también funciona correctamente y con el plan gratuito es más que suficiente, por lo que lo dejo también conectado.
