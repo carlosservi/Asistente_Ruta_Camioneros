@@ -7,11 +7,13 @@ environment:
     - GO_VERSION: "120"
     - GO_VERSION: "121"
 
-  GOPATH: c:\gopath
+  GOPATH: C:\gopath
 
-before_test:
-  - set PATH=C:\go%GO_VERSION%\bin;%PATH%
-  - set GOROOT=C:\go%GO_VERSION%
+build_script:
+  - echo Nothing to build
 
 test_script:
-  - ps: go test -v ./test/...
+  - set PATH=C:\go%GO_VERSION%\bin;%PATH%
+  - set GOROOT=C:\go%GO_VERSION%
+  - go test -v ./test/...
+
