@@ -7,8 +7,6 @@ environment:
     - GO_VERSION: '1.20'
     - GO_VERSION: '1.21'
 
-clone_folder: c:\gopath\src\carlosservi/asistente_ruta_camioneros
-
 build_script:
   - ps: Install-Product node $env:GO_VERSION
   - ps: go version
