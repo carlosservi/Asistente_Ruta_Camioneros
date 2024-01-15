@@ -5,4 +5,8 @@ test: test/optimizacion_test.go
 automatizar:
   fichero: "Taskfile.yaml"
   orden: task check
+
+CI:
+  - .github/workflows/test_ci.yml
+  - .semaphore/semaphore.yml
   
