@@ -13,3 +13,4 @@ blocks:
             - checkout
             - docker build -t carlosservi/asistente_ruta_camioneros .
             - 'docker run  -tv `pwd`:/app/test carlosservi/asistente_ruta_camioneros'
+            
